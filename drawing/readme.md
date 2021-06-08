@@ -1,5 +1,5 @@
 # Tracing an Image
-#### In this document we will show how we can use the dorna 2 robot to trace an image in svg format. We will explain the concepts and show how you can modify the code to your preferences.
+#### In this document we will show how you can use the dorna 2 robot to trace an image in svg format. We will explain the concepts and show how you can modify the code to your preferences.
 ## Toolhead
 ### Parts
 #### We will need to attach the pen holder toolhead. We have the link to the materials below. You can use a 3d printer for 2 of the parts and will need to order a few of the materials. Use the default settings when 3D printing and print with a raft. We will need 9 M3 ½ inch length screws, 1 M3 bolt, 2 3D printed parts, 2 springs, 1 pen(preferably BIC Pen),  and 2 50mm Standoff Column Spacers with 5mm outer diameter. Show picture of all parts
