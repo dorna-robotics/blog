@@ -1,6 +1,6 @@
 # Drawing
 
-## Python code
+## Tracing an Image
 
 ```python
 if x == 2:
