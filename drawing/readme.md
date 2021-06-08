@@ -1,4 +1,18 @@
-# Sample title
+# Drawing
+
+## Python code
+
+```python
+if x == 2:
+  print(x)
+
+# sample variable
+y = 2
+```
+
+if your variable is equal to 2, (`test code`)
+
+
 
 1. First ordered list item
 2. Another item
@@ -16,3 +30,8 @@
 * Unordered list can use asterisks
 - Or minuses
 + Or pluses
+
+First Header | Second Header
+------------ | -------------
+Content cell 1 | Content cell 2
+Content column 1 | Content column 2
