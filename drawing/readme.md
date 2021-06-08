@@ -8,7 +8,7 @@
 #### Put the small 3D printed piece around the shafts and the springs attached as well. Make sure to have the small 3d printed piece oriented to hug the wall farthest from the mount holes on the large 3d printed piece as shown below. Screw 4 M3 screws into the ends of the shafts to lock them in. Now attach the part to the Dorna 2 robot by using 4 M3 screws. Lastly put the pen through the large hole and screw on an M3 bolt and nut. If the pen is too small for the hole. An easy solution can be to wrap it in tape to create a bigger outer diameter.
 ## Code
 ### Image
-#### Find an image in SVG format or a file that can be edited in svg format. You can read into how the svg format works thanks to [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths){:target="_blank"}
+#### Find an image in SVG format or a file that can be edited in svg format. You can read into how the svg format works thanks to [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths)
 ### Actions Needed to Run
 #### The line below allows you to connect to your dorna.  
 ```python
