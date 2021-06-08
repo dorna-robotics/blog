@@ -27,8 +27,8 @@ Next you will set the width and length of the image you want in mm.
     y_max = 1
     y_min = 0
 ```
-#### When the program is run. It will ask you to turn off the motors. Then a command will ask you to direct your robot to the left bottom corner of your paper. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate. A picture shown below.
-![Setting Points](C:\Users\Joseph\Documents\LatestDorna\dorna2-python-master\example\SetupPicture"Setting Points")
+#### When the program is run. It will ask you to turn off the motors. Then a command will ask you to direct your robot to the left bottom corner of your paper. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate. A picture shown below.![Setting Points](C:\Users\Joseph\Documents\LatestDorna\dorna2-python-master\example\SetupPicture"Setting Points")
+
 ## Explanation of Code
 ### Main Function
 #### We can take a look at the main function. The main function starts by connecting to the robot and setting the paper to the right parameters.
