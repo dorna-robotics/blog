@@ -18,8 +18,7 @@ robot.connect("ip address", 443)
 ```python
 cmds = svg(10).gen('filename.svg', x_max, y_max, x_min, y_min, a, b, cp)
 ```
-#### Make sure it is in the same directory as your code on your computer.
-Next you will set the width and length of the image you want in mm.
+#### Make sure it is in the same directory as your code on your computer.Next you will set the width and length of the image you want in mm.
 ```python
 #set the x_max and y_max
     x_max = 1
