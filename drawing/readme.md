@@ -68,7 +68,7 @@ if __name__ == '__main__':
 #### We want to convert all points on an x y axis to a xyz axis given by the 3 corners. This can be done by a linear formula of
  #### [x,y,z]= T * [x0,y0] + [B]
 #### The T stands for transformation and can be solved for because now we have the 3 corners of the plane. T is a 3x2 matrix. B is a 3x1 matrix. B is how much the position is off initially. 
-##### Next we want to find the perpendicular vector from the plane. This will help to move off the paper to different points.
+#### Next we want to find the perpendicular vector from the plane. This will help to move off the paper to different points.
 ```python
 #perpendicular vector in unit vector form
     cp = perpendicularvector(LB,M,TR)
