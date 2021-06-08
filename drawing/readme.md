@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
     robot = dorna()
     print("connecting")
-    robot.connect("10.0.0.6", 443)
+    robot.connect("ip address", 443)
     wait_id = 100
     print("done connecting")
     # now lets write the same thing  and delete it:
