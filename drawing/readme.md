@@ -40,11 +40,10 @@ if __name__ == '__main__':
     wait_id = 100
     print("done connecting")
     # now lets write the same thing  and delete it:
-    #set the x_max and y_max
-    x_max = 1
-    x_min = 0
-    y_max = 1
-    y_min = 0
+    #set the width and length
+    width = 20    
+    length = 15
+
 ```
 Next the starting points are intiliazed by calling a function. With the guidance of the user we can set the 3 points of the paper to understand the size of the paper and to understand the equation of the plane. This is used so if you wanted the plane rotated you could do it.
 ```python
