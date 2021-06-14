@@ -18,7 +18,7 @@ This function allows you to pick your image.
 ```python
 cmds = svg(10).gen('filename.svg', x_max, y_max, x_min, y_min, a, b, cp)
 ```
-Make sure it is in the same directory as your code on your computer.Next you will set the width and length of the image you want in mm.
+Make sure it is in the same directory as your code on your computer.Next you will set the width and length of the image you want in mm. This is used to find the ratio of width to length for scaling
 ```python
 #set the width and length
     width = 1
