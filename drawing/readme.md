@@ -20,14 +20,25 @@ cmds = svg(10).gen('filename.svg', x_max, y_max, x_min, y_min, a, b, cp)
 ```
 Make sure it is in the same directory as your code on your computer.Next you will set the width and length of the image you want in mm.
 ```python
-#set the x_max and y_max
-    x_max = 1
-    x_min = 0
-    y_max = 1
-    y_min = 0
+#set the width and length
+    width = 1
+    length= 1
 ```
 When the program is run. It will ask you to turn off the motors. Then a command will ask you to direct your robot to the left bottom corner of your paper. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate. A picture shown below.![Setting Points](C:\Users\Joseph\Documents\LatestDorna\dorna2-python-master\example\SetupPicture"Setting Points")
 
+This part of the code allows you to change the parameters for a faster drawing or a more precise drawing. Recommendations are given but the numbers can be changed.
+```python
+#the drawing will become more precise by decreasing the numbers below
+    #the drawing will be drawn faster by increasing the numbers below
+    #recommended velocity = 50
+    velocity = 50
+    #recommended acceleration = 300
+    acceleration = 300
+    #recommended jerk = 3000
+    jerk = 3000
+    #recommended corner = 5
+    corner = 5
+```
 ## Explanation of Code
 ### Main Function
 We can take a look at the main function. The main function starts by connecting to the robot and setting the paper to the right parameters.
