@@ -8,9 +8,10 @@
       style="width:100%;">
       </a>
     </div>
-<div align="center">
+    
+<p align="center">
 [![Dorna 2 Robot Draws an Image](https://yt-embed.herokuapp.com/embed?v=ofgnyow7Ydg)](https://www.youtube.com/watch?v=ofgnyow7Ydg "Everything Is AWESOME")
-</div>
+</p>
 
    In this document we will show how you can use the dorna 2 robot to trace an image in svg format. We will explain the concepts and show how you can modify the code to your preferences.
 ## Toolhead Installation
