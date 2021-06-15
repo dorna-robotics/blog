@@ -1,6 +1,6 @@
 # Tracing an Image
 
-[![Dorna 2 Robot Draws an Image](https://yt-embed.herokuapp.com/embed?v=ofgnyow7Ydg)](https://www.youtube.com/watch?v=ofgnyow7Ydg style=centerme)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ofgnyow7Ydg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
    In this document we will show how you can use the dorna 2 robot to trace an image in svg format. We will explain the concepts and show how you can modify the code to your preferences.
