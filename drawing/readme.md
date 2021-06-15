@@ -36,7 +36,7 @@ Make sure it is in the same directory as your code on your computer.Next you wil
 ```
 When the program is run. It will ask you to turn off the motors. Then a command will ask you to direct your robot to the left bottom corner of your paper. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate. A picture shown below.
 <p align="center">
-<img src="SetupPicture.jpg" width="600" />
+<img src="SetupPicture.png" width="600" />
 </p>
 This part of the code allows you to change the parameters for a faster drawing or a more precise drawing. Recommendations are given but the numbers can be changed.
 ```python
