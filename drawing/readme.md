@@ -1,7 +1,7 @@
 # Tracing an Image
 
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=StTqXEQ2l-Y">
+      <a href="https://www.youtube.com/watch?v=ofgnyow7Ydg">
      <img 
       src="https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg" 
       alt="Everything Is AWESOME" 
