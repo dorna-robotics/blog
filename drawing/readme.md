@@ -80,7 +80,7 @@ Next we want to find the perpendicular vector from the plane. This will help to 
 ```
 Next is a function that creates the path. This is the bulk of the code. It will read the letters and numbers and correspond a path to create for the robot.
 ```python
-cmds = svg(10).gen(‘filename.svg', x_max, y_max, x_min, y_min, a, b, cp)
+cmds = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp)
 ```
 The last few lines command the robot and turn it off
 ```python
