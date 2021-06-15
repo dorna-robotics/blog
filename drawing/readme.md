@@ -60,9 +60,6 @@ Next the starting points are intiliazed by calling a function. With the guidance
 ```python
 #intialize the 3 points on the plane,Left Bottom-Point along line-Top Right
     error,LB,M,TR = startingpoints(robot)
-    print("LB",LB)
-    print("M",M)
-    print("TR",TR)
     #check if there is an error from last function called
     if(error == 1):
         print("need to restart")
@@ -72,7 +69,6 @@ Next we call a function that allows us to find a 3rd corner of the paper. This h
 ```python
 #calls function to find 3rd corner for new plane
     TL = findcorner(LB,M,TR)
-    print("TL",TL)
 ```
 We want to convert all points on an x y axis to a xyz axis given by the 3 corners. This can be done by a linear formula of
 [x,y,z]= T * [x0,y0] + [B]
@@ -89,12 +85,9 @@ cmds = svg(10).gen(‘filename.svg', x_max, y_max, x_min, y_min, a, b, cp)
 The last few lines command the robot and turn it off
 ```python
 for cmd in cmds:
-        print("len: ",len(cmd))
         for c in cmd:
             msg = json.dumps(c)
-            print(msg)
             robot.play(msg)
-        print("wait")
         robot.wait(id=wait_id, stat=2)
         wait_id += 100
     
