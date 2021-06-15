@@ -1,6 +1,5 @@
 # Tracing an Image
-
-![Tool Attachment](Sideview1.jpg)
+![](Thumbnail.png)
 In this document we will show how you can use the dorna 2 robot to trace an image in svg format. We will explain the concepts and show how you can modify the code to your preferences.
 ## Toolhead Installation
 ### Parts
@@ -26,7 +25,7 @@ Make sure it is in the same directory as your code on your computer.Next you wil
     width = 1
     length= 1
 ```
-When the program is run. It will ask you to turn off the motors. Then a command will ask you to direct your robot to the left bottom corner of your paper. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate. A picture shown below.![Setting Points](C:\Users\Joseph\Documents\LatestDorna\dorna2-python-master\example\SetupPicture"Setting Points")
+When the program is run. It will ask you to turn off the motors. Then a command will ask you to direct your robot to the left bottom corner of your paper. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate. A picture shown below.![Setup](SetupPicture.png)
 
 This part of the code allows you to change the parameters for a faster drawing or a more precise drawing. Recommendations are given but the numbers can be changed.
 ```python
