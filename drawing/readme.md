@@ -1,7 +1,9 @@
 # Tracing an Image
 
 <p align="center">
+   
 [![Alt text](https://img.youtube.com/vi/ofgnyow7Ydg/0.jpg)](https://www.youtube.com/watch?v=ofgnyow7Ydg)
+   
 </p>
    
    In this document we will show how you can use the dorna 2 robot to trace an image in svg format. We will explain the concepts and show how you can modify the code to your preferences.
