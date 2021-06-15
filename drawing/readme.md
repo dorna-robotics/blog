@@ -28,7 +28,7 @@ When the program is run. It will ask you to turn off the motors. Then a command 
 
 This part of the code allows you to change the parameters for a faster drawing or a more precise drawing. Recommendations are given but the numbers can be changed.
 ```python
-#the drawing will become more precise by decreasing the numbers below
+    #the drawing will become more precise by decreasing the numbers below
     #the drawing will be drawn faster by increasing the numbers below
     #recommended velocity = 50
     velocity = 50
