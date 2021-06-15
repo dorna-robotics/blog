@@ -1,17 +1,7 @@
 # Tracing an Image
 
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=ofgnyow7Ydg">
-     <img 
-      src="https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg" 
-      alt="Everything Is AWESOME" 
-      style="width:100%;">
-      </a>
-    </div>
-    
-<p align="center">
 [![Dorna 2 Robot Draws an Image](https://yt-embed.herokuapp.com/embed?v=ofgnyow7Ydg)](https://www.youtube.com/watch?v=ofgnyow7Ydg "Everything Is AWESOME")
-</p>
+
 
    In this document we will show how you can use the dorna 2 robot to trace an image in svg format. We will explain the concepts and show how you can modify the code to your preferences.
 ## Toolhead Installation
