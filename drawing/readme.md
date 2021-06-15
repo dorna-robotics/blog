@@ -14,6 +14,7 @@ We will need to attach the pen holder toolhead. We have the link to the material
 
 ### Construction
 Put the small 3D printed piece around the shafts and the springs attached as well. Make sure to have the small 3d printed piece oriented to hug the wall farthest from the mount holes on the large 3d printed piece as shown below. Screw 4 M3 screws into the ends of the shafts to lock them in. Now attach the part to the Dorna 2 robot by using 4 M3 screws. Lastly put the pen through the large hole and screw on an M3 bolt and nut. If the pen is too small for the hole. An easy solution can be to wrap it in tape to create a bigger outer diameter.
+
 <p align="center">
 <img src="Topview.jpg" width="600" />
 </p>
@@ -37,9 +38,11 @@ Make sure it is in the same directory as your code on your computer.Next you wil
     length= 1
 ```
 When the program is run. It will ask you to turn off the motors. Then a command will ask you to direct your robot to the left bottom corner of your paper. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate. A picture shown below.
+
 <p align="center">
 <img src="Setup.png" width="600" />
 </p>
+
 This part of the code allows you to change the parameters for a faster drawing or a more precise drawing. Recommendations are given but the numbers can be changed.
 ```python
     #the drawing will become more precise by decreasing the numbers below
@@ -70,7 +73,9 @@ if __name__ == '__main__':
     length = 15
 
 ```
+
 Next the starting points are intiliazed by calling a function. With the guidance of the user we can set the 3 points of the paper to understand the size of the paper and to understand the equation of the plane. This is used so if you wanted the plane rotated you could do it.
+
 ```python
 #intialize the 3 points on the plane,Left Bottom-Point along line-Top Right
     error,LB,M,TR = startingpoints(robot)
