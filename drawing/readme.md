@@ -1,5 +1,5 @@
 # Tracing an Image
-![](Thumbnail.png|width=200 height=200)
+<img src="Thumbnail.png" width="100" height="100">
 In this document we will show how you can use the dorna 2 robot to trace an image in svg format. We will explain the concepts and show how you can modify the code to your preferences.
 ## Toolhead Installation
 ### Parts
