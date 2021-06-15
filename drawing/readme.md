@@ -80,18 +80,36 @@ Next we want to find the perpendicular vector from the plane. This will help to 
 ```
 Next is a function that creates the path. This is the bulk of the code. It will read the letters and numbers and correspond a path to create for the robot.
 ```python
-cmds = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp)
+cmds,cmds_length = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp,scale)
 ```
 The last few lines command the robot and turn it off
 ```python
-for cmd in cmds:
-        for c in cmd:
-            msg = json.dumps(c)
-            robot.play(msg)
-        robot.wait(id=wait_id, stat=2)
-        wait_id += 100
+    command_list=[]
+    i=0
     
+    stop=True
+    while stop:
+        for cmd in cmds:
+            for c in cmd:
+            
+                command_list.append(robot.play(True,**c))
+                if len(command_list)==cmds_length[i]:
+                    
+                    last_continous_point = command_list.pop()
+                    status = last_continous_point.complete()
+                    command_list=[]
+                    if(status == 2):
+                        pass
+                    else:
+                        arg = {"cmd": "halt","id":1000}
+                        robot.play(True,**arg)
+                        break
+                
+        
+            i+=1
+            if len(cmds_length)== i:
+                stop=False
+    print("done")
     robot.close()
-
 ```
 
