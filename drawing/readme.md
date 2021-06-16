@@ -1,7 +1,9 @@
 # Tracing an Image
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ofgnyow7Ydg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   
+<p align="center">
+<img src="thumbnail.png" width="600" />
+</p>
+
    In this document we will show how you can use the dorna 2 robot to trace an image in svg format. We will explain the concepts and show how you can modify the code to your preferences.
 ## Toolhead Installation
 ### Parts
