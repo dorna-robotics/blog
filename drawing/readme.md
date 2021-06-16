@@ -42,8 +42,8 @@ cmds = svg(10).gen('filename.svg', width, length, 0, 0, a, b, cp,scale)
 Make sure it is in the same directory as your code on your computer.Next you will set the width and length of the image you want in mm. This is used to find the ratio of width to length for scaling
 ```python
 #set the width and length
-    width = 1
-    length= 1
+ width = 1
+ length= 1
 ```
 When the program is run. It will ask you to turn off the motors. Then a command will ask you to direct your robot to the left bottom corner of your paper. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate. A picture shown below.
 
@@ -53,16 +53,16 @@ When the program is run. It will ask you to turn off the motors. Then a command 
 
 This part of the code allows you to change the parameters for a faster drawing or a more precise drawing. Recommendations are given but the numbers can be changed.
 ```python
-    #the drawing will become more precise by decreasing the numbers below
-    #the drawing will be drawn faster by increasing the numbers below
-    #recommended velocity = 50
-    velocity = 50
-    #recommended acceleration = 300
-    acceleration = 300
-    #recommended jerk = 3000
-    jerk = 3000
-    #recommended corner = 5
-    corner = 5
+ #the drawing will become more precise by decreasing the numbers below
+ #the drawing will be drawn faster by increasing the numbers below
+ #recommended velocity = 50
+ velocity = 50
+ #recommended acceleration = 300
+ acceleration = 300
+ #recommended jerk = 3000
+ jerk = 3000
+ #recommended corner = 5
+ corner = 5
 ```
 ## Explanation of Code
 ### Main Function
@@ -111,32 +111,32 @@ cmds,cmds_length = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp,s
 ```
 The last few lines command the robot and turn it off
 ```python
-    command_list=[]
-    i=0
-    
-    stop=True
-    while stop:
-        for cmd in cmds:
-            for c in cmd:
-            
-                command_list.append(robot.play(True,**c))
-                if len(command_list)==cmds_length[i]:
-                    
-                    last_continous_point = command_list.pop()
-                    status = last_continous_point.complete()
-                    command_list=[]
-                    if(status == 2):
-                        pass
-                    else:
-                        arg = {"cmd": "halt","id":1000}
-                        robot.play(True,**arg)
-                        break
-                
-        
-            i+=1
-            if len(cmds_length)== i:
-                stop=False
-    print("done")
-    robot.close()
+ command_list=[]
+ i=0
+
+ stop=True
+ while stop:
+     for cmd in cmds:
+         for c in cmd:
+
+             command_list.append(robot.play(True,**c))
+             if len(command_list)==cmds_length[i]:
+
+                 last_continous_point = command_list.pop()
+                 status = last_continous_point.complete()
+                 command_list=[]
+                 if(status == 2):
+                     pass
+                 else:
+                     arg = {"cmd": "halt","id":1000}
+                     robot.play(True,**arg)
+                     break
+
+
+         i+=1
+         if len(cmds_length)== i:
+             stop=False
+ print("done")
+ robot.close()
 ```
 
