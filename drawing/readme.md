@@ -1,7 +1,7 @@
 # Tracing an Image
 
 <p align="center">
-<img src="Thumbnail.png" width="600" />
+<img src="pictures/Thumbnail.png" width="600" />
 </p>
 
 
