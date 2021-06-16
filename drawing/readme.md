@@ -3,7 +3,14 @@
 <p align="center">
 <img src="Thumbnail.png" width="600" />
 </p>
-[youtube link](https://www.youtube.com/watch?v=ofgnyow7Ydg)
+
+
+<p align="center">
+<a href="https://www.youtube.com/watch?v=ofgnyow7Ydg">Link to Youtube video</a>
+</p>
+
+
+
 
    In this document we will show how you can use the dorna 2 robot to trace an image in svg format. We will explain the concepts and show how you can modify the code to your preferences.
 ## Toolhead Installation
@@ -30,7 +37,7 @@ robot.connect("ip address", 443)
 ```
 This function allows you to pick your image.
 ```python
-cmds = svg(10).gen('filename.svg', x_max, y_max, x_min, y_min, a, b, cp)
+cmds = svg(10).gen('filename.svg', width, length, 0, 0, a, b, cp,scale)
 ```
 Make sure it is in the same directory as your code on your computer.Next you will set the width and length of the image you want in mm. This is used to find the ratio of width to length for scaling
 ```python
