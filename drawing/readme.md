@@ -15,7 +15,15 @@
    In this document we will go over the setup and the capabilities of the Dorna 2 robot for drawing an image. Dorna 2 robot can replicate any svg file on any surface. Everything is programmed using python and you will need to download python in order to run the robot.
 ## Toolhead Installation
 ### Parts
-We will need to attach the pen holder toolhead. We have the link to the materials below. You can use a 3d printer for 2 of the parts and will need to order a few of the materials. Use the default settings when 3D printing and print with a raft. We will need [9 M3 10mm length screws and 1 M3 bolt](https://www.amazon.com/Sutemribor-320Pcs-Stainless-Button-Assortment/dp/B07CYNKLT2/ref=sr_1_9?dchild=1&keywords=m3+bolt&qid=1623786985&sr=8-9), [2 3D printed parts](), [2 35mm springs](https://www.amazon.com/1mmx12mmx35mm-Stainless-Compression-Springs-Connector/dp/B08N6TKX5G/ref=sr_1_1_sspa?dchild=1&keywords=compression+spring+35mm&qid=1623787728&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExTjk1VUI0NU40V1pXJmVuY3J5cHRlZElkPUEwNjgyMTkzMkRHNkJKWFBJNzA0WSZlbmNyeXB0ZWRBZElkPUEwODI5NTkzMlAzSldOU0tDUklISCZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=), [1 pen(preferably BIC Pen)](https://www.amazon.com/BIC-Round-Ballpoint-Medium-36-Count/dp/B00347A8NK/ref=sr_1_1_sspa?dchild=1&keywords=bic+pen&qid=1623787158&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyRTNHV1czWUY3TTRGJmVuY3J5cHRlZElkPUEwMDE4NDEzUkhDN1ZKU1VHT0g5JmVuY3J5cHRlZEFkSWQ9QTA0NDI4OTkyN1RHREZLVUQxSE5IJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==),  and [2 50mm Standoff Column Spacers with 5mm outer diameter](https://www.amazon.com/uxcell-Aluminum-Standoff-Airplane-Quadcopter/dp/B07MJBHKDP/ref=sr_1_3?dchild=1&keywords=standoffs+50mm&qid=1623787093&sr=8-3). 
+We will need to attach the pen holder toolhead. We have the link to the materials below. You can use a 3d printer for 2 of the parts and will need to order a few of the materials. Use the default settings when 3D printing and print with a raft. 
+|Items|Links|
+|---|----|
+|2 3D printed parts|[link]()|
+|9 M3 10mm length and 1 M3 bolt|[link](https://www.amazon.com/Sutemribor-320Pcs-Stainless-Button-Assortment/dp/B07CYNKLT2/ref=sr_1_9?dchild=1&keywords=m3+bolt&qid=1623786985&sr=8-9)|
+|2 35mm springs|[link](https://www.amazon.com/1mmx12mmx35mm-Stainless-Compression-Springs-Connector/dp/B08N6TKX5G/ref=sr_1_1_sspa?dchild=1&keywords=compression+spring+35mm&qid=1623787728&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExTjk1VUI0NU40V1pXJmVuY3J5cHRlZElkPUEwNjgyMTkzMkRHNkJKWFBJNzA0WSZlbmNyeXB0ZWRBZElkPUEwODI5NTkzMlAzSldOU0tDUklISCZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=)|
+|1 pen(preferably bic pen)|[link](https://www.amazon.com/BIC-Round-Ballpoint-Medium-36-Count/dp/B00347A8NK/ref=sr_1_1_sspa?dchild=1&keywords=bic+pen&qid=1623787158&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyRTNHV1czWUY3TTRGJmVuY3J5cHRlZElkPUEwMDE4NDEzUkhDN1ZKU1VHT0g5JmVuY3J5cHRlZEFkSWQ9QTA0NDI4OTkyN1RHREZLVUQxSE5IJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==)|
+|2 50mm Standoff Column Spacers with 5mm outer diameter|[link](https://www.amazon.com/uxcell-Aluminum-Standoff-Airplane-Quadcopter/dp/B07MJBHKDP/ref=sr_1_3?dchild=1&keywords=standoffs+50mm&qid=1623787093&sr=8-3)|
+
 <p align="center">
 <img src="materiallist.jpg" width="600" />
 </p>
@@ -31,7 +39,7 @@ Put the small 3D printed piece around the shafts and the springs attached as wel
 ### Image
 Find an image in SVG format or a file that can be edited in svg format. You can read into how the svg format works thanks to [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
 ### Actions Needed to Run
-The line below allows you to connect to your dorna.  
+The language we are commanding the robot in is Python. The line below allows you to connect to your Dorna 2.  [For more information on the API](https://doc.dorna.ai/docs/api/python/manual/)
 ```python
 robot.connect("ip address", 443)
 ```
@@ -75,10 +83,9 @@ if __name__ == '__main__':
     robot.connect("ip address", 443)
     wait_id = 100
     print("done connecting")
-    # now lets write the same thing  and delete it:
-    #set the width and length
-    width = 20    
-    length = 15
+    #set the width and length in mm
+    width = 200   
+    length = 150
 
 ```
 
@@ -109,7 +116,7 @@ Next is a function that creates the path. This is the bulk of the code. It will 
 ```python
 cmds,cmds_length = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp,scale)
 ```
-The last few lines command the robot and turn it off
+The last few lines command the robot and turn it off. [For more information on commands](https://doc.dorna.ai/docs/cmd/intro/)
 ```python
  command_list=[]
  i=0
