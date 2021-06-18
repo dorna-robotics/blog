@@ -12,7 +12,10 @@
 
 
 
-   In this document we will go over the setup and the capabilities of the Dorna 2 robot for drawing an image. Dorna 2 robot can replicate any svg file on any surface. Everything is programmed using python and you will need to download python in order to run the robot.
+   In this document we will go over the setup and the capabilities of the Dorna 2 robot for drawing an image. Dorna 2 robot can replicate any svg file on any surface. Everything is programmed using python and you will need to download python in order to run the robot.  
+ 
+ You can find the original document here on our website:
+ https://dorna.ai/blog/dorna-drawing/
 ## Toolhead Installation
 ### Parts
 We will need to attach the pen holder toolhead. We have the link to the materials below. You can use a 3d printer for 2 of the parts and will need to order a few of the materials. Use the default settings when 3D printing and print with a raft. 
