@@ -32,7 +32,7 @@ We will need to attach the pen holder toolhead. We have the link to the material
 </p>
 
 ### Construction
-Put the small 3D printed piece around the shafts and the springs attached as well. If the shafts doesn't slide along the small 3D printed piece it is recommended to sand paper the holes down. Make sure to have the small 3d printed piece oriented to hug the wall farthest from the mount holes on the large 3D printed piece as shown below. Screw 4x M3 screws into the ends of the shafts to lock them in. Now attach the part to the Dorna 2 robot by using 4x M3 screws. Lastly put the pen through the large hole and screw on an M3 bolt and nut. If the pen is too small for the hole. An easy solution can be to wrap it in tape to create a bigger outer diameter for the pen.
+Put the small 3D printed piece around the shafts and the springs attached as well. If the shafts doesn't slide along the small 3D printed piece it is recommended to sand paper the holes down. Make sure to have the small 3D printed piece oriented to hug the wall farthest from the mount holes on the large 3D printed piece as shown below. Screw 4x M3 screws into the ends of the shafts to lock them in. Now attach the part to the Dorna 2 robot by using 4x M3 screws. Lastly put the pen through the large hole and screw on an M3 bolt and nut. If the pen is too small for the hole. An easy solution can be to wrap it in tape to create a bigger outer diameter for the pen.
 
 <p align="center">
 <img src="pictures/Topview.jpg" width="600" />
