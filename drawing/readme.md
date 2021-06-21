@@ -12,7 +12,7 @@
 
 
 
-In this document we will go over the setup and the capabilities of the Dorna 2 robot for drawing an image. Dorna 2 robot can replicate any SVG file on any plane. Everything is programmed using python. 
+In this document we will go over the setup and the capabilities of the Dorna 2 robot for drawing an image. Dorna 2 robot can replicate any SVG file on any plane. Everything is programmed using Python. 
  
 You can find the original document here on our website:
 https://dorna.ai/blog/dorna-drawing/
@@ -42,7 +42,7 @@ Put the smaller 3D printed piece around the shafts and the springs attached as w
 ### Image
 Find an image in SVG format or convert a file to svg format. You can read into how the SVG format works thanks to [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
 ### Actions Needed to Run
-The language we are commanding the robot in is python. You will need to download [python](https://www.python.org/downloads/) if you haven't already done so. The line below allows you to connect to your Dorna 2. The IP address needs to be inputted into the code.  [For more information on the API](https://doc.dorna.ai/docs/api/python/manual/).
+The language we are commanding the robot in is Python. You will need to download [Python](https://www.python.org/downloads/) if you haven't already done so. The line below allows you to connect to your Dorna 2. The IP address needs to be inputted into the code.  [For more information on the API](https://doc.dorna.ai/docs/api/python/manual/).
 ```python
 robot.connect("ip address", 443)
 ```
