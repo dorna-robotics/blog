@@ -42,7 +42,7 @@ Put the small 3D printed piece around the shafts and the springs attached as wel
 ### Image
 Find an image in SVG format or a file that can be edited in svg format. You can read into how the svg format works thanks to [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
 ### Actions Needed to Run
-The language we are commanding the robot in is Python. You will need to download [python](https://www.python.org/downloads/) if you haven't already done so. The line below allows you to connect to your Dorna 2.  [For more information on the API](https://doc.dorna.ai/docs/api/python/manual/)
+The language we are commanding the robot in is Python. You will need to download [python](https://www.python.org/downloads/) if you haven't already done so. The line below allows you to connect to your Dorna 2.  [For more information on the API](https://doc.dorna.ai/docs/api/python/manual/).
 ```python
 robot.connect("ip address", 443)
 ```
@@ -50,7 +50,7 @@ The function below generates the set of commands for the robot to move in a 3D s
 ```python
 cmds, cmds_length = svg(10).gen('filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
 ```
-Next you will set the width and length of the image you want in mm. This is used to find the ratio of width to length for scaling
+Next you will set the width and length of the image you want in mm. This is used to find the ratio of width to length for scaling.
 ```python
 #set the width and length in milimeters
 width = 200
@@ -110,7 +110,7 @@ We want to convert all points on an xy axis to a xyz axis given by the 3 corners
 
 [[x],[y],[z]]= [T] * [[x0],[y0]] + [B]
 
-The T stands for transformation and can be solved for because now we have the 3 corners of the plane. T is a 3x2 matrix. B is a 3x1 matrix. B is the starting position's coordinates . 
+The T stands for transformation and can be solved for because now we have the 3 corners of the plane. T is a 3x2 matrix. B is a 3x1 matrix. B is the starting position's coordinates. 
 Next we want to find the perpendicular vector from the plane. This will help to move the robot away from the paper when lifting the pen on a drawing.
 ```python
 #perpendicular vector in unit vector form
@@ -120,7 +120,7 @@ Next is a function that creates the path. This is the bulk of the code. This fun
 ```python
 cmds, cmds_length = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
 ```
-The last few lines of the code takes the list of commands created from the the function above and sends it to the robot. The robot receives the commands one continous line at a time. It will wait for the previous continous line to complete before adding the next continous line to the queue.  [For more information on commands](https://doc.dorna.ai/docs/cmd/intro/)
+The last few lines of the code takes the list of commands created from the the function above and sends it to the robot. The robot receives the commands one continous line at a time. It will wait for the previous continous line to complete before adding the next continous line to the queue.  [For more information on commands](https://doc.dorna.ai/docs/cmd/intro/).
 ```python
  command_list=[]
  i=0
