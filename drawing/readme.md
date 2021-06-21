@@ -46,7 +46,7 @@ The language we are commanding the robot in is Python. You will need to download
 ```python
 robot.connect("ip address", 443)
 ```
-Next you will set the width and length of the image you want in mm. This is used to find the ratio of width to length for scaling.
+Next you will set the width and length of the image you want in mm. This is used to find the ratio of width to length for scaling the image.
 ```python
 #set the width and length in milimeters
 width = 200
