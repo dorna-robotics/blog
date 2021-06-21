@@ -12,7 +12,7 @@
 
 
 
-In this document we will go over the setup and the capabilities of the Dorna 2 robot for drawing an image. Dorna 2 robot can replicate any SVG file on any plane. Everything is programmed using Python. 
+In this document we will go over the setup and the capabilities of the Dorna 2 robot for drawing an image. Dorna 2 robot can replicate any SVG file to draw an image on any plane. Everything is programmed using Python. 
  
 You can find the original document here on our website:
 https://dorna.ai/blog/dorna-drawing/
