@@ -32,7 +32,7 @@ We will need to attach the pen holder toolhead. We have the link to the material
 </p>
 
 ### Construction
-Put the small 3D printed piece around the shafts and the springs attached as well. If the shafts don't slide along the small 3D printed piece it is recommended to sand paper the holes down. Make sure to have the small 3d printed piece oriented to hug the wall farthest from the mount holes on the large 3D printed piece as shown below. Screw 4x M3 screws into the ends of the shafts to lock them in. Now attach the part to the Dorna 2 robot by using 4x M3 screws. Lastly put the pen through the large hole and screw on an M3 bolt and nut. If the pen is too small for the hole. An easy solution can be to wrap it in tape to create a bigger outer diameter.
+Put the small 3D printed piece around the shafts and the springs attached as well. If the shafts doesn't slide along the small 3D printed piece it is recommended to sand paper the holes down. Make sure to have the small 3d printed piece oriented to hug the wall farthest from the mount holes on the large 3D printed piece as shown below. Screw 4x M3 screws into the ends of the shafts to lock them in. Now attach the part to the Dorna 2 robot by using 4x M3 screws. Lastly put the pen through the large hole and screw on an M3 bolt and nut. If the pen is too small for the hole. An easy solution can be to wrap it in tape to create a bigger outer diameter for the pen.
 
 <p align="center">
 <img src="pictures/Topview.jpg" width="600" />
@@ -56,7 +56,7 @@ Next you will set the width and length of the image you want in mm. This is used
 width = 200
 length= 150
 ```
-When the program is run. It will ask you to turn off the motors. Be sure to hold the robot when turning off the motors because it will fall. Then a command will ask you to direct your robot to the left bottom corner of your paper. Be sure to have the toolhead attachment perpendicular to the surface. Not doing so will have the tool attachment going deeper into the surface then desired. Set the pen so it is barely touching the surface. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate. A command asking to turn on the motors will come up. After doing so will have the Dorna 2 robot start drawing.
+When the program is run. It will ask you to turn off the motors. Be sure to hold the robot when turning off the motors because it will fall. Then a command will ask you to direct your robot to the left bottom corner of your paper. Be sure to have the toolhead attachment perpendicular to the surface. Not doing so will have the tool attachment going deeper into the surface then desired. Set the pen so it is barely touching the surface. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate as shown below. A command asking to turn on the motors will come up. After doing so, the Dorna 2 robot will draw the image.
 
 <p align="center">
 <img src="pictures/Setup.png" width="600" />
@@ -78,7 +78,7 @@ corner = 5
 ```
 ## Explanation of Code
 ### Main Function
-We can take a look at the main function. The main function starts by connecting to the robot and with user inputs for the surface the program has a better understanding of the scaling.
+We can take a look at the main function. This is at the bottom of the code. The main function starts by connecting to the robot and with user inputs for the width and length the program has a better understanding of the scaling.
 ```python
 if __name__ == '__main__':
     robot = dorna()
@@ -91,7 +91,7 @@ if __name__ == '__main__':
     length = 150
 ```
 
-Next the starting points are intiliazed by calling a function. With the guidance of the user we can set the 3 points of the paper to understand the size of the paper and to understand the equation of the plane. This is used so if the surface isn't completely flat the program will modify the path to the new plane.
+Next the starting points are intiliazed by calling a function. With the guidance of the user we can set the 3 points of the paper to understand the size of the paper and to understand the equation of the plane. This is used so if the surface isn't completely flat the program will modify the path to a rotated plane.
 
 ```python
 #intialize the 3 points on the plane,Left Bottom-Point along line-Top Right
@@ -106,7 +106,7 @@ Next we call a function that allows us to find a 3rd corner of the paper. This h
 #calls function to find 3rd corner for new plane
 TL = findcorner(LB, M, TR)
 ```
-We want to convert all points on an xy axis to a xyz axis given by the 3 corners. This can be done by a linear formula of
+We want to convert all points on an xy axis to a xyz axis given by the plane set. This can be done by a linear formula of
 
 [[x],[y],[z]]= [T] * [[x0],[y0]] + [B]
 
