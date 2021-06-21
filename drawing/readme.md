@@ -22,7 +22,7 @@ We will need to attach the pen holder toolhead. We have the link to the material
 |Items|Links|
 |---|----|
 |2x 3D printed parts|[link](https://github.com/dorna-robotics/dorna2_otto/tree/main/drawing/STL%20files)|
-|9x M3 10mm length and 1 M3 bolt|[link](https://www.amazon.com/Sutemribor-320Pcs-Stainless-Button-Assortment/dp/B07CYNKLT2/ref=sr_1_9?dchild=1&keywords=m3+bolt&qid=1623786985&sr=8-9)|
+|9x M3 10mm length and 1x M3 bolt|[link](https://www.amazon.com/Sutemribor-320Pcs-Stainless-Button-Assortment/dp/B07CYNKLT2/ref=sr_1_9?dchild=1&keywords=m3+bolt&qid=1623786985&sr=8-9)|
 |2x 35mm springs|[link](https://www.amazon.com/1mmx12mmx35mm-Stainless-Compression-Springs-Connector/dp/B08N6TKX5G/ref=sr_1_1_sspa?dchild=1&keywords=compression+spring+35mm&qid=1623787728&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExTjk1VUI0NU40V1pXJmVuY3J5cHRlZElkPUEwNjgyMTkzMkRHNkJKWFBJNzA0WSZlbmNyeXB0ZWRBZElkPUEwODI5NTkzMlAzSldOU0tDUklISCZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=)|
 |1x pen(preferably bic pen)|[link](https://www.amazon.com/BIC-Round-Ballpoint-Medium-36-Count/dp/B00347A8NK/ref=sr_1_1_sspa?dchild=1&keywords=bic+pen&qid=1623787158&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyRTNHV1czWUY3TTRGJmVuY3J5cHRlZElkPUEwMDE4NDEzUkhDN1ZKU1VHT0g5JmVuY3J5cHRlZEFkSWQ9QTA0NDI4OTkyN1RHREZLVUQxSE5IJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==)|
 |2x 50mm Standoff Column Spacers with 5mm outer diameter|[link](https://www.amazon.com/uxcell-Aluminum-Standoff-Airplane-Quadcopter/dp/B07MJBHKDP/ref=sr_1_3?dchild=1&keywords=standoffs+50mm&qid=1623787093&sr=8-3)|
@@ -48,7 +48,7 @@ robot.connect("ip address", 443)
 ```
 The function below generates the set of commands for the robot to move in a 3D space. 'filename.svg' can be changed to choose what svg file you want to draw. Make sure to have the file in the same directory on your computer.
 ```python
-cmds = svg(10).gen('filename.svg', width, length, 0, 0, a, b, cp,scale)
+cmds = svg(10).gen('filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
 ```
 Next you will set the width and length of the image you want in mm. This is used to find the ratio of width to length for scaling
 ```python
@@ -104,7 +104,7 @@ robot.close()
 Next we call a function that allows us to find a 3rd corner of the paper. This helps us define the paper more
 ```python
 #calls function to find 3rd corner for new plane
-TL = findcorner(LB,M,TR)
+TL = findcorner(LB, M, TR)
 ```
 We want to convert all points on an x y axis to a xyz axis given by the 3 corners. This can be done by a linear formula of
 
@@ -114,11 +114,11 @@ The T stands for transformation and can be solved for because now we have the 3 
 Next we want to find the perpendicular vector from the plane. This will help to move off the paper to different points.
 ```python
 #perpendicular vector in unit vector form
-cp = perpendicularvector(LB,M,TR)
+cp = perpendicularvector(LB, M, TR)
 ```
 Next is a function that creates the path. This is the bulk of the code. It will read the letters and numbers and correspond a path to create for the robot.
 ```python
-cmds,cmds_length = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp,scale)
+cmds,cmds_length = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
 ```
 The last few lines command the robot and turn it off. [For more information on commands](https://doc.dorna.ai/docs/cmd/intro/)
 ```python
@@ -129,7 +129,7 @@ The last few lines command the robot and turn it off. [For more information on c
  while stop:
      for cmd in cmds:
          for c in cmd:
-             command_list.append(robot.play(True,**c))
+             command_list.append(robot.play(True, **c))
              if len(command_list)==cmds_length[i]:
                  last_continous_point = command_list.pop()
                  status = last_continous_point.complete()
@@ -137,8 +137,8 @@ The last few lines command the robot and turn it off. [For more information on c
                  if(status == 2):
                      pass
                  else:
-                     arg = {"cmd": "halt","id":1000}
-                     robot.play(True,**arg)
+                     arg = {"cmd": "halt", "id":1000}
+                     robot.play(True, **arg)
                      break
          i+=1
          if len(cmds_length)== i:
