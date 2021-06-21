@@ -40,9 +40,9 @@ Put the smaller 3D printed piece around the shafts and the springs attached as w
 
 ## Code
 ### Image
-Find an image in SVG format or a file that can be edited in SVG format. You can read into how the SVG format works thanks to [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
+Find an image in SVG format or convert a file to svg format. You can read into how the SVG format works thanks to [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
 ### Actions Needed to Run
-The language we are commanding the robot in is Python. You will need to download [python](https://www.python.org/downloads/) if you haven't already done so. The line below allows you to connect to your Dorna 2. The IP address needs to be inputted into the code.  [For more information on the API](https://doc.dorna.ai/docs/api/python/manual/).
+The language we are commanding the robot in is python. You will need to download [python](https://www.python.org/downloads/) if you haven't already done so. The line below allows you to connect to your Dorna 2. The IP address needs to be inputted into the code.  [For more information on the API](https://doc.dorna.ai/docs/api/python/manual/).
 ```python
 robot.connect("ip address", 443)
 ```
