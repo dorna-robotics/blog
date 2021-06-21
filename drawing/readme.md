@@ -116,7 +116,7 @@ Next we want to find the perpendicular vector from the plane. This will help to 
 #perpendicular vector in unit vector form
 cp = perpendicularvector(LB, M, TR)
 ```
-Next is a function that creates the path. This is the bulk of the code. This function creates a xy path from the SVG path provided. The function will then transform the 2D path into a 3D path. The 3D path will then be set in a command form for the robot to understand using cartesian coordinates. 
+Next is a function that creates the path. This is the bulk of the code. This function creates a xy path from the SVG path provided. The function will then transform the 2D path into a 3D path. The 3D path will then be set in a command form for the robot to understand using Cartesian coordinates. 
 ```python
 cmds, cmds_length = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
 ```
