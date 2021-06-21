@@ -91,7 +91,7 @@ if __name__ == '__main__':
     length = 150
 ```
 
-Next the starting points are intiliazed by calling a function. With the guidance of the user we can set the 3 points of the paper to understand the size of the paper and to understand the equation of the plane. This is used so if the surface isn't completely flat the program will modify the path to a new plane.
+Next the starting points are initialized by calling a function. With the guidance of the user we can set the 3 points of the paper to understand the size of the paper and to understand the equation of the plane. This is used so if the surface isn't completely flat the program will modify the path to a new plane.
 
 ```python
 #intialize the 3 points on the plane,Left Bottom-Point along line-Top Right
