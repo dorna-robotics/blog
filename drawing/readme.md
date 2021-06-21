@@ -42,13 +42,13 @@ Put the small 3D printed piece around the shafts and the springs attached as wel
 ### Image
 Find an image in SVG format or a file that can be edited in svg format. You can read into how the svg format works thanks to [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
 ### Actions Needed to Run
-The language we are commanding the robot in is Python. The line below allows you to connect to your Dorna 2.  [For more information on the API](https://doc.dorna.ai/docs/api/python/manual/)
+The language we are commanding the robot in is Python. You will need to download [python](https://www.python.org/downloads/) if you haven't already done so. The line below allows you to connect to your Dorna 2.  [For more information on the API](https://doc.dorna.ai/docs/api/python/manual/)
 ```python
 robot.connect("ip address", 443)
 ```
 The function below generates the set of commands for the robot to move in a 3D space. 'filename.svg' can be changed to choose what svg file you want to draw. Make sure to have the file in the same directory on your computer.
 ```python
-cmds = svg(10).gen('filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
+cmds, cmds_length = svg(10).gen('filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
 ```
 Next you will set the width and length of the image you want in mm. This is used to find the ratio of width to length for scaling
 ```python
@@ -56,13 +56,13 @@ Next you will set the width and length of the image you want in mm. This is used
 width = 200
 length= 150
 ```
-When the program is run. It will ask you to turn off the motors. Then a command will ask you to direct your robot to the left bottom corner of your paper. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate. A picture shown below. Be sure to have the toolhead attachment perpendicular to the surface.
+When the program is run. It will ask you to turn off the motors. Be sure to hold the robot when turning off the motors because it will fall. Then a command will ask you to direct your robot to the left bottom corner of your paper. Be sure to have the toolhead attachment perpendicular to the surface. Not doing so will have the tool attachment going deeper into the surface then desired. Set the pen so it is barely touching the surface. The command will then ask you to direct the robot to the top right of the paper. Lastly you will then direct the robot to a point along the line clockwise of the left bottom coordinate. A command asking to turn on the motors will come up. After doing so will have the Dorna 2 robot start drawing.
 
 <p align="center">
 <img src="pictures/Setup.png" width="600" />
 </p>
 
-This part of the code allows you to change the parameters for a faster drawing or a more precise drawing. Recommendations are given but the numbers can be changed.
+This part of the code allows you to change the parameters for a faster drawing or a more precise drawing. Recommendations are given but the numbers can be changed. The numbers will change the upper limits of the motion parameters.
 ```python
 #the drawing will become slower and more precise by decreasing the numbers below
 #the drawing will be drawn faster but less precise by increasing the numbers below
@@ -78,7 +78,7 @@ corner = 5
 ```
 ## Explanation of Code
 ### Main Function
-We can take a look at the main function. The main function starts by connecting to the robot and setting the paper to the right parameters.
+We can take a look at the main function. The main function starts by connecting to the robot and with user inputs for the surface the program has a better understanding of the scaling.
 ```python
 if __name__ == '__main__':
     robot = dorna()
@@ -91,40 +91,39 @@ if __name__ == '__main__':
     length = 150
 ```
 
-Next the starting points are intiliazed by calling a function. With the guidance of the user we can set the 3 points of the paper to understand the size of the paper and to understand the equation of the plane. This is used so if you wanted the plane rotated you could do it.
+Next the starting points are intiliazed by calling a function. With the guidance of the user we can set the 3 points of the paper to understand the size of the paper and to understand the equation of the plane. This is used so if the surface isn't completely flat the program will modify the path to the new plane.
 
 ```python
 #intialize the 3 points on the plane,Left Bottom-Point along line-Top Right
-error,LB,M,TR = startingpoints(robot)
+error, LB, M, TR = startingpoints(robot)
 #check if there is an error from last function called
 if(error == 1):
 print("need to restart")
 robot.close()
 ```
-Next we call a function that allows us to find a 3rd corner of the paper. This helps us define the paper more
+Next we call a function that allows us to find a 3rd corner of the paper. This helps us define the paper more and allows the program to have a upper limit for the surfaces width and length in 3D space.
 ```python
 #calls function to find 3rd corner for new plane
 TL = findcorner(LB, M, TR)
 ```
-We want to convert all points on an x y axis to a xyz axis given by the 3 corners. This can be done by a linear formula of
+We want to convert all points on an xy axis to a xyz axis given by the 3 corners. This can be done by a linear formula of
 
-[[x],[y],[z]]= T * [[x0],[y0]] + [B]
+[[x],[y],[z]]= [T] * [[x0],[y0]] + [B]
 
-The T stands for transformation and can be solved for because now we have the 3 corners of the plane. T is a 3x2 matrix. B is a 3x1 matrix. B is how much the position is off initially. 
-Next we want to find the perpendicular vector from the plane. This will help to move off the paper to different points.
+The T stands for transformation and can be solved for because now we have the 3 corners of the plane. T is a 3x2 matrix. B is a 3x1 matrix. B is the starting position's coordinates . 
+Next we want to find the perpendicular vector from the plane. This will help to move the robot away from the paper when lifting the pen on a drawing.
 ```python
 #perpendicular vector in unit vector form
 cp = perpendicularvector(LB, M, TR)
 ```
-Next is a function that creates the path. This is the bulk of the code. It will read the letters and numbers and correspond a path to create for the robot.
+Next is a function that creates the path. This is the bulk of the code. This function creates a xy path from the svg path provided. The function will then transform the 2D pathh created into a 3D path. The 3D path will then be set in a command form for the robot to understand using cartesian coordinates. 
 ```python
-cmds,cmds_length = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
+cmds, cmds_length = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
 ```
-The last few lines command the robot and turn it off. [For more information on commands](https://doc.dorna.ai/docs/cmd/intro/)
+The last few lines of the code takes the list of commands created from the the function above and sends it to the robot. The robot receives the commands one continous line at a time. It will wait for the previous continous line to complete before adding the next continous line to the queue.  [For more information on commands](https://doc.dorna.ai/docs/cmd/intro/)
 ```python
  command_list=[]
  i=0
-
  stop=True
  while stop:
      for cmd in cmds:
