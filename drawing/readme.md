@@ -12,7 +12,7 @@
 
 
 
-In this document we will go over the setup and the capabilities of the Dorna 2 robot for drawing an image. Dorna 2 robot can replicate any svg file on any surface. Everything is programmed using python and you will need to download python in order to run the robot.  
+In this document we will go over the setup and the capabilities of the Dorna 2 robot for drawing an image. Dorna 2 robot can replicate any SVG file on any surface. Everything is programmed using python and you will need to download python in order to run the robot.  
  
 You can find the original document here on our website:
 https://dorna.ai/blog/dorna-drawing/
@@ -40,13 +40,13 @@ Put the small 3D printed piece around the shafts and the springs attached as wel
 
 ## Code
 ### Image
-Find an image in SVG format or a file that can be edited in svg format. You can read into how the svg format works thanks to [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
+Find an image in SVG format or a file that can be edited in SVG format. You can read into how the SVG format works thanks to [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
 ### Actions Needed to Run
 The language we are commanding the robot in is Python. You will need to download [python](https://www.python.org/downloads/) if you haven't already done so. The line below allows you to connect to your Dorna 2.  [For more information on the API](https://doc.dorna.ai/docs/api/python/manual/).
 ```python
 robot.connect("ip address", 443)
 ```
-The function below generates the set of commands for the robot to move in a 3D space. 'filename.svg' can be changed to choose what svg file you want to draw. Make sure to have the file in the same directory on your computer.
+The function below generates the set of commands for the robot to move in a 3D space. 'filename.svg' can be changed to choose what SVG file you want to draw. Make sure to have the file in the same directory on your computer.
 ```python
 cmds, cmds_length = svg(10).gen('filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
 ```
@@ -116,7 +116,7 @@ Next we want to find the perpendicular vector from the plane. This will help to 
 #perpendicular vector in unit vector form
 cp = perpendicularvector(LB, M, TR)
 ```
-Next is a function that creates the path. This is the bulk of the code. This function creates a xy path from the svg path provided. The function will then transform the 2D path into a 3D path. The 3D path will then be set in a command form for the robot to understand using cartesian coordinates. 
+Next is a function that creates the path. This is the bulk of the code. This function creates a xy path from the SVG path provided. The function will then transform the 2D path into a 3D path. The 3D path will then be set in a command form for the robot to understand using cartesian coordinates. 
 ```python
 cmds, cmds_length = svg(10).gen(‘filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
 ```
