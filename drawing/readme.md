@@ -91,7 +91,7 @@ error, LB, M, TR = startingpoints(robot)
 #check if there is an error from last function called
 if(error == 1):
     print("need to restart")
-robot.close()
+    robot.close()
 ```
 Next we call a function that allows us to find a 3rd corner of the paper. This helps us define the papers width and length and allows the program to have a upper limit for the surfaces width and length in 3D space.
 ```python
