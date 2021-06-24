@@ -46,12 +46,6 @@ Here we use Python for programming the robot. You need to download [Python](http
 ```python
 robot.connect("robot_ip_address", 443)
 ```
-Next you will set the width and length of the image you want in mm. This is used to find the ratio of width to length for scaling the image.
-```python
-#set the width and length in milimeters
-width = 200
-length= 150
-```
 The line below takes the path to the SVG file and generates the commands associated to that SVG file.
 ```python
 cmds, cmds_length = svg(10).gen('filename.svg', width, length, 0, 0, a, b, cp, scale, velocity, acceleration, jerk, corner)
@@ -78,7 +72,7 @@ corner = 5
 ```
 ## Explanation of Code
 ### Main Function
-We can take a look at the main function. This section is at the bottom of the code. The main function starts by connecting to the robot and with user inputs for the width and length the program has a better understanding of the scaling of the iamge.
+We can take a look at the main function. This section is at the bottom of the code. The main function starts by connecting to the robot.
 ```python
 if __name__ == '__main__':
     robot = dorna()
@@ -86,9 +80,7 @@ if __name__ == '__main__':
     robot.connect("ip address", 443)
     wait_id = 100
     print("done connecting")
-    #set the width and length in mm
-    width = 200   
-    length = 150
+    
 ```
 
 Next the starting points are initialized by calling the `.startingpoints()` function. With the guidance of the user we can set the 3 points of the paper to understand the size of the paper and to understand the equation of the plane. This is used so if the surface isn't completely flat the program will modify the path to a new plane.
