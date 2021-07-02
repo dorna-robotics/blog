@@ -13,6 +13,8 @@ In this document we will showcase the Dorna 2's ability to add multiple degrees 
 ## Camera Attachment
 
 ### Construction
+Down below is all the materials you will need to run your Dorna 2 Robot with a camera attachment.
+
 |Items|Links|
 |---|----|
 |Three 3D printed parts| link |
@@ -24,9 +26,13 @@ In this document we will showcase the Dorna 2's ability to add multiple degrees 
 <p align="center">
 <img src="pictures/construction.jpg" width="600" />
 </p>
+
+Start by connecting the motor to the motor-attachment(3D-printed part) by screwing the 4 x M3 bolts 8mm length. Connect the gear(3D printed part) to the shaft of the stepper motor and tighten the gear to stop any slipping by screwing the M3 bolt 20mm length with a M3 bolt. Home the robot before mounting the mount(3D printed part) to the robot. Then attach the mount to the robot with 4 x M3 bolts 8mm length. Attach the camera through one of the two holes made for the camera mount using the 1/4" bolt 3/8" length. Orientate the camera so it is parallel to the shaft sticking out of the mount and facing towards that direction. Now attach the gearstrip to the camera lens so that the clip is farthest from the shaft sticking out of the mount. Attach the motor attachment and mesh the gear to the gear strip. Tighten it with a M3 bolt 20mm length and a bolt.
+
 <p align="center">
 <img src="pictures/cameramount.jpg" width="600" />
 </p>
+
 ### Application
 
 ## Railing
