@@ -14,7 +14,7 @@ In this document we will showcase the Dorna 2's ability to add multiple degrees 
 
 ### Construction
 <p align="center">
-<img src="pictures/construction.png" width="600" />
+<img src="pictures/construction.jpg" width="600" />
 </p>
 ### Application
 
