@@ -1,4 +1,4 @@
-# Tracing an Image
+#Adding Degrees of Freedom using a Camera and Rail
 
 <p align="center">
 <img src="pictures/Thumbnail.png" width="600" />
