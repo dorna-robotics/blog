@@ -15,12 +15,11 @@ In this document we will showcase the Dorna 2's ability to add multiple degrees 
 ### Construction
 |Items|Links|
 |---|----|
-|Three 3D printed parts||
-|8 x M3 bolts 8mm length  and 2 x M3 Hex Nuts||
-
+|Three 3D printed parts| link |
+|8 x M3 bolts 8mm length, 2 x M3 Hex Nuts, 2 x M3 bolts 20mm length|[link](https://www.amazon.com/Sutemribor-320Pcs-Stainless-Button-Assortment/dp/B07CYNKLT2/ref=sr_1_9?dchild=1&keywords=m3+bolt&qid=1623786985&sr=8-9)|
 |1 x 1/4" bolt 3/8" length||
 |1 x Gear Strip|[link](https://www.amazon.com/Rubber-Flexible-DP500IIS-DP500III-Adjustable/dp/B078QYL2M8/ref=pd_sbs_3/144-0547124-8837416?pd_rd_w=yNFb3&pf_rd_p=a5925d26-9630-40f3-a011-d858608ac88b&pf_rd_r=APJ3XXDH9RQ9VH2T9MB7&pd_rd_r=be764343-9fef-420b-b88e-008e1de311e6&pd_rd_wg=7bTAI&pd_rd_i=B078QYL2M8&psc=1)|
-|1 x Driver and 1 x Stepper Motor||
+|1 x Driver and 1 x Stepper Motor and Wires||
 
 <p align="center">
 <img src="pictures/construction.jpg" width="600" />
