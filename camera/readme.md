@@ -16,6 +16,9 @@ In this document we will showcase the Dorna 2's ability to add multiple degrees 
 <p align="center">
 <img src="pictures/construction.jpg" width="600" />
 </p>
+<p align="center">
+<img src="pictures/cameramount.jpg" width="600" />
+</p>
 ### Application
 
 ## Railing
