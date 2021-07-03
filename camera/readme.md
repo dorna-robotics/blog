@@ -1,4 +1,4 @@
-# Adding Degrees of Freedom using a Camera and Rail
+# Adding Degrees of Freedom using a Camera Motor and Rail
 
 <p align="center">
 <img src="pictures/Thumbnail.png" width="600" />
@@ -14,7 +14,7 @@ In this document we will showcase the Dorna 2's ability to add multiple degrees 
 
 ### Construction
 Down below is all the materials you will need to run your Dorna 2 Robot with a camera attachment.
-
+#### Building the Mount
 |Items|Links|
 |---|----|
 |Three 3D printed parts| link |
@@ -27,17 +27,23 @@ Down below is all the materials you will need to run your Dorna 2 Robot with a c
 <img src="pictures/construction.jpg" width="600" />
 </p>
 
-Start by connecting the motor to the motor-attachment(3D-printed part) by screwing the 4 x M3 bolts 8mm length. Connect the gear(3D printed part) to the shaft of the stepper motor and tighten the gear to stop any slipping by screwing the M3 bolt 20mm length with a M3 bolt. Home the robot before mounting the mount(3D printed part) to the robot. Then attach the mount to the robot with 4 x M3 bolts 8mm length. Attach the camera through one of the two holes made for the camera mount using the 1/4" bolt 3/8" length. Orientate the camera so it is parallel to the shaft sticking out of the mount and facing towards that direction. Now attach the gearstrip to the camera lens so that the clip is farthest from the shaft sticking out of the mount. Attach the motor attachment and mesh the gear to the gear strip. Tighten it with a M3 bolt 20mm length and a bolt.
+Start by connecting the motor to the motor-attachment(3D-printed part) by screwing the 4 x M3 bolts 8mm length. Connect the gear(3D printed part) to the shaft of the stepper motor and tighten the gear to stop any slipping by screwing the M3 bolt 20mm length with a M3 hex nut. Home the robot before mounting the mount(3D printed part) to the robot. Then attach the mount to the robot with 4 x M3 bolts 8mm length. Attach the camera through one of the two holes made for the camera mount using the 1/4" bolt 3/8" length. Orientate the camera so it is parallel to the shaft sticking out of the mount and facing towards that direction. Now attach the gearstrip to the camera lens so that the clip is farthest from the shaft sticking out of the mount. Attach the motor attachment and mesh the gear to the gear strip. Tighten it with a M3 bolt 20mm length and M3 hex nut.
 
 <p align="center">
 <img src="pictures/cameramount.jpg" width="600" />
 </p>
 
+#### Connecting to the Robot
+
+Using the cables provided from buying the stepper motor from Dorna Robotics. Connect the two wires to the motor, the side with the green tip should attach to the stepper motor driver. The side with the white plastic piece attaches inside the control box for the Dorna 2 Robot. The position chosen with effect the which number axis will be selected for the motion. Wire the enable, pulse, and direction into the driver. Be sure to choose the right wires. This can be easily obtained by putting the white plastic piece into the control box and reading what colors associate to what parameter.
 ### Application
+
+Go to lab.dorna.ai, connect the robot and home it. Go to settings. Then to parameters and choose the correct number of axes for each additional axes added be sure to count up from 5. In this case specifically choose 6. Now you can input for j(#port_chosen) and read how at what values the extreme of j are. Every camera lens can turn to different angles so it is important to find the extremes. Set one side to 0 and spin the lens to find the maximum degree for j. Now you are able to teach your Dorna to film.
 
 ## Railing
-
+### Construction
+[For the documentation on how to set up your Dorna rail](https://doc.dorna.ai/docs/accs/rail/).
 ### Application
-
+Add one additional axes in lab.dorna.ai. Now you can operate both the railing and camera. This can be used to get different angles of a frame.
 
 
