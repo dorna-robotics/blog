@@ -1,4 +1,4 @@
-# Adding Degrees of Freedom using a Camera Motor and Rail
+# Additional Axes using a Camera Motor and Rail
 
 <p align="center">
 <img src="pictures/Thumbnail.png" width="600" />
@@ -42,9 +42,8 @@ Using the cables provided from buying the stepper motor from Dorna Robotics. Con
 
 ### Application
 
-Go to lab.dorna.ai, connect the robot and home it. Go to settings. Then to parameters and choose the correct number of axes for each additional axes added be sure to count up from 5. In this case specifically choose 6. Now you can input for j(#port_chosen) and find the values for the maximum and minimum extremes of j. Camera lens turn to different set angles so it is important to find the extremes. Set one side to 0 and spin the lens to find the maximum degree for j. Now you are able to teach your Dorna to film using lab.dorna.ai or Python.
-For those using [Python API](https://doc.dorna.ai/docs/api/python/manual/). We can also use Python to control the robot using the commands
-
+Go to lab.dorna.ai and connect the robot and home it. Go to settings and then go to parameters and choose the correct number of axes. For each additional axes added be sure to count up from 5. In this case specifically choose 6 because we have 1 additional axes. Now you can input for j5 and find the values for the maximum and minimum extremes of j. Camera lens turn to different set angles so it is important to find the extremes. Set one side to 0 and spin the lens to find the maximum degree for j. Now you are able to teach your Dorna 2 to film using lab.dorna.ai or Python.
+To learn more about the [Python API](https://doc.dorna.ai/docs/api/python/manual/) for those that want to use Python to control the Dorna 2. The additional axes can also be controlled in Python.
 ## Railing
 
 ### Construction
