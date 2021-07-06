@@ -38,7 +38,7 @@ Start by connecting the stepper motor to the motor-attachment(3D-printed part) b
 
 #### Connecting to the Robot
 
-Using the cables provided from buying the stepper motor from Dorna Robotics. Connect the one wire to each the stepper motor and the encoder. Attach the wire from the motor to the stepper motor driver. The side with the white plastic piece attaches inside the control box for the Dorna 2 Robot. The picture below has a blue box showing the wiring for the encoder. The red box shows the wiring for the stepper motor driver. Currently a stepper motor is in the 6 axes position. An encoder would be plugged in directly across from stepper motor driver associated to it. Wire the enable, pulse, and direction into the driver. Be sure to choose the right wires. This can be easily obtained by putting the white plastic piece into the control box and reading what color wire associates to what parameter(Enable, Pulse, and Direction). 
+Attach stepper motor to the stepper motor driver. Connect the encoder and stepper motor driver to the control box for the Dorna 2. The picture below shows inside the control box. The picture has a blue box showing the wiring for the encoder. The picture has a red box showing the wiring for the stepper motor driver. Currently a stepper motor is in the 6 axes position. An encoder would be plugged in directly across from stepper motor driver associated to it. Wire the enable, pulse, and direction into the driver. Be sure to choose the right wires. This can be easily obtained by putting the white plastic attachement into the control box and reading what color wire associates to what parameter(Enable, Pulse, and Direction). 
 
 <p align="center">
 <img src="pictures/wiring.png" width="600" />
