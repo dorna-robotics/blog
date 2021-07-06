@@ -38,7 +38,7 @@ Start by connecting the stepper motor to the motor-attachment(3D-printed part) b
 
 #### Connecting to the Robot
 
-Using the cables provided from buying the stepper motor from Dorna Robotics. Connect the two wires to the motor, the side with the green tip should attach to the stepper motor driver. The side with the white plastic piece attaches inside the control box for the Dorna 2 Robot. The picture below has a blue box showing the wiring for the encoder. The red box shows the wiring for the stepper motor driver. Currently a stepper motor is in the 6 axes position. An encoder would be plugged in directly across from stepper motor driver associated to it. Wire the enable, pulse, and direction into the driver. Be sure to choose the right wires. This can be easily obtained by putting the white plastic piece into the control box and reading what color wire associates to what parameter(Enable, Pulse, and Direction). 
+Using the cables provided from buying the stepper motor from Dorna Robotics. Connect the one wire to each the stepper motor and the encoder. Attach the wire from the motor to the stepper motor driver. The side with the white plastic piece attaches inside the control box for the Dorna 2 Robot. The picture below has a blue box showing the wiring for the encoder. The red box shows the wiring for the stepper motor driver. Currently a stepper motor is in the 6 axes position. An encoder would be plugged in directly across from stepper motor driver associated to it. Wire the enable, pulse, and direction into the driver. Be sure to choose the right wires. This can be easily obtained by putting the white plastic piece into the control box and reading what color wire associates to what parameter(Enable, Pulse, and Direction). 
 
 <p align="center">
 <img src="pictures/wiring.png" width="600" />
@@ -47,6 +47,7 @@ Using the cables provided from buying the stepper motor from Dorna Robotics. Con
 ### Application
 
 Go to [lab.dorna.ai](http://lab.dorna.ai) and connect the robot and home it. Go to settings and then go to parameters and choose the correct number of axes. For each additional axes added be sure to count up from 5. In this case specifically choose 6 because we have 1 additional axes. Now you can input for j5 and find the values for the maximum and minimum extremes of j. Camera lens turn to different set angles so it is important to find the extremes. Set one side to 0 and spin the lens to find the maximum degree for j. Now you are able to teach your Dorna 2 to film using [lab.dorna.ai](https://lab.dorna.ai) or Python.
+
 To learn more about the [Python API](https://doc.dorna.ai/docs/api/python/manual/) for those that want to use Python to control the Dorna 2. The additional axes can also be controlled in Python.
 ## Railing
 
