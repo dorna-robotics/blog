@@ -54,7 +54,7 @@ To learn more about the [Python API](https://doc.dorna.ai/docs/api/python/manual
 
 [Buy a Dorna Rail](https://dorna.ai/product/dorna-rail/)
 
-[For the documentation on how to set up your Dorna rail](http://doc.dorna.ai/docs/accs/rail/).
+[For the documentation on how to set up your Dorna rail](http://doc.dorna.ai/docs/accs/rail/)
 
 ### Application
 
