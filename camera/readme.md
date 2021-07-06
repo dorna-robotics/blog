@@ -42,7 +42,7 @@ Using the cables provided from buying the stepper motor from Dorna Robotics. Con
 
 ### Application
 
-Go to [lab.dorna.ai](lab.dorna.ai) and connect the robot and home it. Go to settings and then go to parameters and choose the correct number of axes. For each additional axes added be sure to count up from 5. In this case specifically choose 6 because we have 1 additional axes. Now you can input for j5 and find the values for the maximum and minimum extremes of j. Camera lens turn to different set angles so it is important to find the extremes. Set one side to 0 and spin the lens to find the maximum degree for j. Now you are able to teach your Dorna 2 to film using [lab.dorna.ai](lab.dorna.ai) or Python.
+Go to [lab.dorna.ai](https://lab.dorna.ai) and connect the robot and home it. Go to settings and then go to parameters and choose the correct number of axes. For each additional axes added be sure to count up from 5. In this case specifically choose 6 because we have 1 additional axes. Now you can input for j5 and find the values for the maximum and minimum extremes of j. Camera lens turn to different set angles so it is important to find the extremes. Set one side to 0 and spin the lens to find the maximum degree for j. Now you are able to teach your Dorna 2 to film using [lab.dorna.ai](https://lab.dorna.ai) or Python.
 To learn more about the [Python API](https://doc.dorna.ai/docs/api/python/manual/) for those that want to use Python to control the Dorna 2. The additional axes can also be controlled in Python.
 ## Railing
 
@@ -52,4 +52,4 @@ To learn more about the [Python API](https://doc.dorna.ai/docs/api/python/manual
 
 ### Application
 
-Add one additional axes in [lab.dorna.ai](lab.dorna.ai) settings. For this specific case we now have 7 axes. Now you can operate both the railing and camera. 
+Add one additional axes in [lab.dorna.ai](https://lab.dorna.ai) settings. For this specific case we now have 7 axes. Now you can operate both the railing and camera. 
