@@ -1,7 +1,7 @@
 # Additional Axes using a Camera Motor and Rail
 
 <p align="center">
-<img src="pictures/Thumbnail.png" width="600" />
+<img src="pictures/thumbnail.png" width="600" />
 </p>
 
 
