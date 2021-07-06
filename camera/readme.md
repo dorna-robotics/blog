@@ -14,7 +14,7 @@ In this document we will showcase the Dorna 2's ability to add multiple degrees 
 
 ### Construction
 
-Down below is all the materials you will need to run your Dorna 2 Robot with a camera attachment.
+Down below are all the materials you will need to run your Dorna 2 Robot with a camera attachment.
 
 #### Building the Mount
 
