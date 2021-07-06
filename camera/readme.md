@@ -52,4 +52,4 @@ To learn more about the [Python API](https://doc.dorna.ai/docs/api/python/manual
 
 ### Application
 
-Add one additional axes in lab.dorna.ai settings. For this specific case we now have 7 axes. Now you can operate both the railing and camera. 
+Add one additional axes in [lab.dorna.ai](lab.dorna.ai) settings. For this specific case we now have 7 axes. Now you can operate both the railing and camera. 
