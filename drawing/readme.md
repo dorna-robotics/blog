@@ -39,6 +39,7 @@ Put the smaller 3D printed piece around the shafts and the springs attached as w
 </p>
 
 ## Code
+A link to the code: https://github.com/dorna-robotics/blog/tree/main/drawing/code
 ### Image
 Find an image in SVG format or convert a file to SVG format (use [InKscape](https://inkscape.org/) for that purpose). You can read into how the SVG format works thanks to [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
 ### Actions Needed to Run
